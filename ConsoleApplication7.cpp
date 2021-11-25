@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 using namespace std;
 int main() {
     setlocale(0, "RU");
@@ -20,18 +20,18 @@ int main() {
         f = 00;
         for (k = 0; k < n; k++) {
             for (m = 0; m < n; m++) {
-                if (ar[k] != arr[m]) { f++; }//cout<<"  "<<ar[k]<<" ->ar[k]   "<<arr[m]<<" ->arr[m]    \n";
-                continue;
+                if (ar[k] != arr[m]) { f++; };
+                
             }if (f < n - 1)ar[k] = 1000000;
-            f = 0;
+            f = 0; 
         }
 
         for (k = 1; k < n; k++) {
-            cout << "конечный массив > " << ar[k]<<"\n";
-            if (ar[k - 1] < ar[k]) { m = ar[k]; ar[k] = ar[k - 1]; ar[k - 1] = m; }
-            
 
-        }//for(k=0;k<n;k++)cout<<a[k]<<endl;
+            if (ar[k - 1] < ar[k]) { m = ar[k]; ar[k] = ar[k - 1]; ar[k - 1] = m; }//поиск наименьшего
+
+
+        }for(k=0;k<n;k++)cout << "конечный массив > " << ar[k] << endl;
         cout << "наименьшее = " << ar[n - 1] << endl << "Чтобы продолжить введите 0, чтобы выйти из программы 1 -> ";
         cin >> t;
 
